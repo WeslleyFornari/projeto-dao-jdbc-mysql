@@ -22,6 +22,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		this.conn = conn;
 	}
 	
+// ----------------------------------------------------------------------------------------------------------------	
 	@Override
 	public Department findById(Integer id) {
 		PreparedStatement st = null;
@@ -47,7 +48,8 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			DB.closeResultSet(rs);
 		}
 	}
-
+	
+	// ----------------------------------------------------------------------------------------------------------------
 	@Override
 	public List<Department> findAll() {
 		PreparedStatement st = null;
@@ -75,7 +77,8 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			DB.closeResultSet(rs);
 		}
 	}
-
+	// ----------------------------------------------------------------------------------------------------------------
+	
 	@Override
 	public void insert(Department obj) {
 		PreparedStatement st = null;
@@ -109,7 +112,8 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			DB.closeStatement(st);
 		}
 	}
-
+	// ----------------------------------------------------------------------------------------------------------------
+	
 	@Override
 	public void update(Department obj) {
 		PreparedStatement st = null;
@@ -131,7 +135,8 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			DB.closeStatement(st);
 		}
 	}
-
+	// ----------------------------------------------------------------------------------------------------------------
+	
 	@Override
 	public void deleteById(Integer id) {
 		PreparedStatement st = null;
